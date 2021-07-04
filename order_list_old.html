@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="css/aui-slide.css" />
+    <link rel="stylesheet" href="css/jquery.countdown.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/order.css" />
+    <title>我的菜單</title>
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav bg_default aui-bar-light">
+        <a href="javascript:history.back()" class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">我的菜單</div>
+    </header>
+    <section>
+        <!-- 規格數量 -->
+        <div class="aui-content aui-margin-b-15 aui-margin-t-15 invoice">
+            <ul class="aui-list aui-media-list aui-bg-white">
+                <div class="p_list">
+                    <li class="aui-list-item">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-inner">
+                                <div class="count_box">
+                                    <div class="count_l"><span><i id="1_-" class="aui-iconfont aui-icon-minus" onclick="checkPositive()"></i></span></div>
+                                    <div class="count_num"><input type="text" style="text-align: center;" name="count[]" value="1" onclick="changeTotal()" readonly="readonly"></div>
+                                    <div class="count_r"><span><i id="1_+" class="aui-iconfont aui-icon-plus" onclick="checkPositive()"></i></span></div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">葛瑪蘭黑豚 早午餐</div>
+                                </div>
+                                <div class="price">NT$280
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-inner">
+                                <div class="count_box">
+                                    <div class="count_l"><span><i id="1_-" class="aui-iconfont aui-icon-minus" onclick="checkPositive()"></i></span></div>
+                                    <div class="count_num"><input type="text" style="text-align: center;" name="count[]" value="1" onclick="changeTotal()" readonly="readonly"></div>
+                                    <div class="count_r"><span><i id="1_+" class="aui-iconfont aui-icon-plus" onclick="checkPositive()"></i></span></div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">煙燻鮭魚開放式三明治</div>
+                                </div>
+                                <div class="price">NT$170
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-inner">
+                                <div class="count_box">
+                                    <div class="count_l"><span><i id="1_-" class="aui-iconfont aui-icon-minus" onclick="checkPositive()"></i></span></div>
+                                    <div class="count_num"><input type="text" style="text-align: center;" name="count[]" value="1" onclick="changeTotal()" readonly="readonly"></div>
+                                    <div class="count_r"><span><i id="1_+" class="aui-iconfont aui-icon-plus" onclick="checkPositive()"></i></span></div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">莎莎醬佛卡夏</div>
+                                </div>
+                                <div class="price">NT$130
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="total">
+                    <li class="aui-list-item aui-list-item-middle">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <span>共<span class="aui-text-danger aui-bold"> <span id="show_total">2</span> </span>件商品金額</span>
+                                    <span>NT$ 4000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item aui-list-item-middle">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <span>服務費</span>
+                                    <span>NT$ 0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item aui-list-item-middle total_price">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <span>總計</span>
+                                    <span>NT$<span class="text_default aui-bold"> 4000</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <!-- 訂購人資訊 -->
+        <div class="aui-content aui-margin-b-15 aui-margin-t-15 invoice">
+            <ul class="aui-list aui-select-list aui-bg-white">
+                <li class="aui-list-item aui-list-item-middle">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <span>付款方式</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <label><input class="aui-radio" type="radio" name="radio" checked=""> LINE PAY</label>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <label><input class="aui-radio" type="radio" name="radio"> 現金</label>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <label><input class="aui-radio" type="radio" name="radio"> 信用卡</label>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <label><input class="aui-radio" type="radio" name="radio"> 悠遊卡</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 桌次 -->
+        <div class="aui-content aui-margin-b-15 aui-margin-t-15 invoice">
+            <ul class="aui-list aui-form-list aui-bg-white">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            選擇桌次
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label">
+                            區域
+                        </div>
+                        <div class="aui-list-item-input arrow_down">
+                            <select>
+                                <option>一樓</option>
+                                <option>二樓</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner seat_box">
+                        <div class="seat_item disable">
+                            A桌
+                        </div>
+                        <div class="seat_item">
+                            B桌
+                        </div>
+                        <div class="seat_item">
+                            C桌
+                        </div>
+                        <div class="seat_item">
+                            D桌
+                        </div>
+                        <div class="seat_item">
+                            E桌
+                        </div>
+                        <div class="seat_item disable">
+                            F桌
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="popup-cover"></div>
+    <footer class="aui-bar aui-bar-tab aui-margin-t-15">
+        <a href="order_success.html" class="aui-bar-tab-item bg_default" tapmode="">確認點餐</a>
+    </footer>
+    <script type="text/javascript" src="script/aui-collapse.js"></script>
+    <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+    apiready = function() {
+        api.parseTapmode();
+    }
+    var collapse = new auiCollapse({
+        autoHide: false //是否自动隐藏已经展开的容器
+    });
+    </script>
+    <script>
+    // 選擇器
+    $(function() {
+        $(".seat_box .seat_item").click(function() {
+            $(this).toggleClass("active");
+            $(".seat_item.disable").removeClass("active");
+            $(".seat_item.disable").addClass("disable");
+        });
+    });
+    $(function() {
+        $("#type_02 .aui-label").click(function() {
+            $("#type_02 .aui-label").removeClass("aui-label-info");
+            $(this).addClass("aui-label-info");
+            $(this).removeClass("aui-label-default");
+        });
+    });
+
+    //加減計算
+    function checkPositive() {
+        let id = event.target.id;
+        console.log(id);
+        let split = id.split("_");
+        let idx = parseInt(split[0]) - 1;
+        console.log(idx);
+        var x = document.getElementsByName("count[]");
+        if (split[1] == "+") {
+            x[idx].value = parseInt(x[idx].value) + 1;
+        } else if (split[1] == "-") {
+            x[idx].value = parseInt(x[idx].value) - 1;
+        } else {}
+        self.changeTotal();
+    }
+    // 顯示剩餘數量
+    function changeTotal(x) {
+        var x = document.getElementsByName("count[]");
+        for (let a = 0; a < x.length; a++) {
+            if (x[a].value < 0) { x[a].value = 0; }
+        }
+        var total_count = 0;
+        for (let a = 0; a < x.length; a++) {
+            let t = parseInt(x[a].value);
+            total_count += t;
+        }
+        console.log(`total = ${total_count}`);
+        document.getElementById("show_total").innerHTML = total_count;
+    }
+    </script>
+</body>
+<script type="text/javascript" src="./script/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./script/jquery.countdown.js"></script>
+
+</html>

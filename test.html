@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>今日头条APP顶部点击可居中导航</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-flex.css" />
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.countdown.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>跨境電商</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #topNav {
+        width: 100%;
+        overflow: hidden;
+        font: 16px/32px hiragino sans gb, microsoft yahei, simsun;
+        border-bottom: 1px solid #f8f8f8;
+    }
+
+    #topNav .swiper-slide {
+        padding: 0 5px;
+        letter-spacing: 2px;
+        width: 3rem;
+        text-align: center;
+    }
+
+    #topNav .swiper-slide span {
+
+        transition: all .3s ease;
+        display: block;
+    }
+
+    #topNav .active span {
+        transform: scale(1.1);
+        color: #FF2D2D;
+    }
+
+    img {
+        width: 100%;
+        line-height: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="topNav" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide active"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+            <div class="swiper-slide"><span>分類</span></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./script/swiper.min.js"></script>
+    <script type="text/javascript" src="./script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./script/script.js"></script>
+    <script type="text/javascript">
+    var mySwiper = new Swiper('#topNav', {
+        freeMode: true,
+        freeModeMomentumRatio: 0.5,
+        slidesPerView: 'auto',
+
+    });
+
+    swiperWidth = mySwiper.container[0].clientWidth
+    maxTranslate = mySwiper.maxTranslate();
+    maxWidth = -maxTranslate + swiperWidth / 2
+
+    $(".swiper-container").on('touchstart', function(e) {
+        e.preventDefault()
+    })
+
+    mySwiper.on('tap', function(swiper, e) {
+
+        e.preventDefault()
+
+        slide = swiper.slides[swiper.clickedIndex]
+        slideLeft = slide.offsetLeft
+        slideWidth = slide.clientWidth
+        slideCenter = slideLeft + slideWidth / 2
+        // 被点击slide的中心点
+
+        mySwiper.setWrapperTransition(300)
+
+        if (slideCenter < swiperWidth / 2) {
+
+            mySwiper.setWrapperTranslate(0)
+
+        } else if (slideCenter > maxWidth) {
+
+            mySwiper.setWrapperTranslate(maxTranslate)
+
+        } else {
+
+            nowTlanslate = slideCenter - swiperWidth / 2
+
+            mySwiper.setWrapperTranslate(-nowTlanslate)
+
+        }
+
+        $("#topNav  .active").removeClass('active')
+
+        $("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+
+    })
+    </script>
+</body>
+    <script type="text/javascript" src="./script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./script/jquery.countdown.js"></script>
+</html>

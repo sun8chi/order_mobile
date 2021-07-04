@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <link rel="stylesheet" href="css/jquery.countdown.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>會員中心</title>
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav aui-text-left header" id="header">
+        <a href="index.html" class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-home"></span>
+        </a>
+        <div class="aui-title">會員中心</div>
+    </header>
+    <!-- 會員資訊 bg-member -->
+    <section class="aui-content bg-member">
+        <!-- 會員名稱/相片 username -->
+        <div class="aui-title username">
+            <img class="aui-margin-b-5" src="image/icon/user.png" alt=""> 林美麗
+            <br><span class="aui-text-primary">TW00002421</span>
+        </div>
+    </section>
+    <!-- 功能列表 m-tool -->
+    <section class="aui-content aui-grid aui-margin-b-15 listbox m-tool">
+        <div class="aui-row">
+            <div class="aui-col-xs-4 points_list">
+                <a href="points_list.html">
+                <img src="image/icon/m-coins.png" alt=""> 
+                <div class="aui-grid-label">點數：150</div>
+            </a>
+            </div>
+            <div class="aui-col-xs-4 order">
+                <a href="order.html">
+                <img src="image/icon/m-order.png" alt=""> 
+                <div class="aui-grid-label">我的訂單</div>
+            </a>
+            </div>
+            <div class="aui-col-xs-4 cart">
+                <a href="cart.html">
+                <img src="image/icon/m-cart.png" alt=""> 
+                <div class="aui-grid-label">購物車</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- 功能列表 -->
+    <section class="aui-content aui-grid aui-margin-b-15 listbox aui-margin-t-15">
+        <div class="aui-content">
+            <ul class="aui-list aui-list-in aui-bg-white">
+                <li class="aui-list-item member_edit">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-my aui-text-success"></i>
+                    </div>
+                    <a href="member_edit.html" class="aui-list-item-inner aui-list-item-arrow">
+                        我的資料
+                    </a>
+                </li>
+                <li class="aui-list-item member_edit">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-lock aui-text-success"></i>
+                    </div>
+                    <a href="change_paycode.html" class="aui-list-item-inner aui-list-item-arrow">
+                        變更支付密碼
+                    </a>
+                </li>
+                <li class="aui-list-item address_manage">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-location aui-text-success"></i>
+                    </div>
+                    <a href="address_manage.html" class="aui-list-item-inner aui-list-item-arrow">
+                        常用聯絡人
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 1.5rem;">
+                        <i class="aui-iconfont aui-icon-back"></i>
+                    </div>
+                    <a href="login.html" class="aui-list-item-inner aui-list-item-arrow log_out">
+                        登出
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部導航 -->
+    <footer class="aui-bar aui-bar-tab">
+        <div class="aui-bar-tab-item footer_home aui-active" tapmode>
+            <a href="index.html">
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">前台首頁</div>
+            </a>
+        </div>
+        <div class="aui-bar-tab-item footer_shop" tapmode>
+            <a href="shop.html">
+            <i class="aui-iconfont aui-icon-star"></i>
+            <div class="aui-bar-tab-label">採購列表</div>
+            </a>
+        </div>
+        <div class="aui-bar-tab-item footer_cart" tapmode>
+            <a href="cart.html">
+                <div class="aui-badge">5</div>
+                <i class="aui-iconfont aui-icon-cart"></i>
+                <div class="aui-bar-tab-label">購物車</div>
+            </a>
+        </div>
+        <div class="aui-bar-tab-item footer_member" tapmode>
+            <a href="member.html">
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">會員專區</div>
+            </a>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="./script/swiper.min.js"></script>
+<script type="text/javascript" src="./script/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./script/script.js"></script>
+<script>
+// $(document).ready(function() {
+//     $("#footer").load("footer.html");
+// });
+</script>
+
+</html>

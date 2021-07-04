@@ -1,0 +1,345 @@
+/*配色*/
+body {
+    margin-bottom: 3.2rem;
+}
+a:hover {
+    text-decoration: none;
+}
+.aui-list label {
+    width: 100%;
+    display: inline-block;
+}
+.arrow_down {
+    position: relative;
+}
+.arrow_down:before {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 7.5px 0 7.5px;
+    border-color: #adadad transparent transparent transparent;
+}
+#topNav .swiper-slide.aui-active {
+    border-bottom: 2px solid #BEC23F;
+    color: #BEC23F;
+}
+
+.swiper-pagination-bullet-active {
+    background: #BEC23F;
+}
+
+.aui-bar-tab .aui-bar-tab-item {
+    background: #BEC23F;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+button,
+.aui-btn {
+    border-radius: 0;
+}
+
+.aui-bar-nav .aui-title {
+    font-size: 16px;
+}
+
+.bg_default {
+    background: #BEC23F !important;
+    color: #fff !important;
+}
+
+.text_default {
+    color: #BEC23F !important;
+}
+
+hr {
+    background: #BEC23F;
+    height: 3px;
+    width: 50px;
+    margin: 10px 0;
+}
+
+.aui-list .aui-list-item-text ,.aui-media-list .aui-list-item-inner{
+    font-size: 16px;
+}
+
+/*選單*/
+.bar_fixs {
+    position: absolute;
+    background: none;
+}
+
+
+/*店家*/
+.store_top {
+    position: relative;
+    background: url(../image/order/store.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    color: #fff;
+    z-index: 1;
+}
+
+.store_top h1,
+.store_top span {
+    position: relative;
+    z-index: 3;
+}
+
+.store_top h1 {
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.store_top span {
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+.store_top:before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 5, 1, 0.3);
+}
+
+#topNav .swiper-slide {
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#topNav .active span {
+    transform: scale(1);
+}
+
+/*菜單*/
+.menu_item {
+    padding: 3px !important;
+}
+
+.menu_item_content {
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+}
+
+.food_img {
+    height: 23vh;
+}
+
+.food_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu_item .menu_info {
+    padding: 10px;
+}
+
+.menu_item h2 {
+    font-size: 16px;
+}
+
+.menu_item p {
+    font-size: 14px;
+}
+
+
+/*菜單介紹*/
+.food_detail {
+    text-align: justify;
+    background: #fff;
+}
+
+.food_detail h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.food_detail p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.popup {
+    background: rgba(198, 206, 212, 0.23);
+    height: auto;
+    top: 0;
+    bottom: auto;
+    position: absolute;
+    padding-bottom: 3rem;
+}
+
+.popup .aui-list-item-media {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.popup .aui-list-item-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aui-list .aui-list-header {
+    background: rgba(198, 206, 212, 0.23);
+    color: #333;
+}
+select {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+.aui-list .aui-list-item-title,
+.select-type .aui-label {
+    font-size: 16px;
+    padding: 5px 6px;
+}
+.aui-bar-tab .aui-bar-tab-item {
+    font-size: 16px;
+}
+.footer_fixd {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background: #fff;
+}
+
+.count_box {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.count_box div {
+    width: 100%;
+}
+
+.count_box .count_l span,
+.count_box .count_r span {
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 1.8rem;
+    height: 1.8rem;
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+.count_num input[type="text"] {
+    height: 1.8rem;
+}
+
+
+/*確認訂單*/
+.invoice .count_box .count_l span,
+.invoice .count_box .count_r span {
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    color: #BEC23F;
+    border: none;
+    font-weight: bold;
+}
+
+.invoice .aui-list{
+    border-radius: 10px !important;
+    padding: .5rem;
+}
+.invoice {
+    text-align: left;
+    overflow: visible;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.invoice .price {
+    font-size: 16px;
+    color: #666;
+}
+
+.invoice .aui-list-item-inner {
+    display: flex;
+}
+
+.invoice .total_price {
+    border-top: 1px dashed #ddd;
+    font-weight: bold;
+
+}
+.invoice .aui-list-item {
+    background: transparent;
+    padding-right: .75rem;
+}
+
+.invoice .total .count_box {
+    flex: 4;
+}
+
+.invoice .total .aui-list-item-text {
+    flex: 7;
+}
+.invoice .p_list .list_name {
+    flex: 7;
+}
+.invoice .p_list .list_number {
+    flex: 1;
+}
+.aui-list.aui-form-list .aui-list-item-inner.seat_box {
+    display: block;
+    margin-top: 10px;
+}
+.seat_box .seat_item {
+    width: 30%;
+    display: inline-block;
+    border: 1px solid #777;
+    color: #777;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+.seat_box .seat_item.active {
+    border: 1px solid #BEC23F;
+    color: #fff;
+    background: #BEC23F;
+}
+.seat_box .seat_item.disable {
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+@media (min-width: 768px ) {
+    .aui-bar-nav .aui-title,.aui-bar-tab .aui-bar-tab-item,.invoice .price ,.aui-list .aui-list-item-text ,.aui-media-list .aui-list-item-inner,#topNav .swiper-slide,.menu_item h2,.aui-list .aui-list-item-title,
+.select-type .aui-label,.aui-bar-tab .aui-bar-tab-item{
+        font-size: 20px;
+    }
+    .menu_item p,.store_top span {
+        font-size: 16px;
+    }
+}

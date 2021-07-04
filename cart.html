@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>購物車</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.countdown.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .aui-list .aui-list-item-right,
+    .aui-list-item-title-row em {
+        max-width: 40% !important;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav aui-text-left header" id="header">
+        <a href="shop.html" class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-home"></span>
+        </a>
+        <a href="#" class="aui-pull-right aui-btn" id="change-price">
+            <span>變價</span>
+            <span style="display: none;">確認</span>
+        </a>
+        <div class="aui-title">購物車</div>
+    </header>
+    <div class="aui-content cart">
+        <ul class="aui-list aui-select-list aui-bg-white">
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <a href="detail.html">
+                            <img src="image/product/03.jpeg">
+                        </a>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-16 aui-ellipsis-2">日本brother 紫語花仙子縫紉機<span class="p_type aui-text-gray">(粉紅色)</span></div>
+                            <a href="#" class="aui-pull-left">
+                                <p class="aui-iconfont aui-icon-trash"></p>
+                            </a>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-10">
+                            <div class="change-price">NT$<span class="aui-text-danger aui-bold aui-font-size-16">2000</span>
+                                <input class="input-border" type="text" placeholder="變價金額">
+                                <span class="c_price aui-text-info"></span>
+                            </div>
+                            <div class="aui-list-item-right">
+                                <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:90%;float:right">
+                                    <div class="aui-bar-btn-item">
+                                        <i id="1_-" class="aui-iconfont aui-icon-minus" onclick="checkPositive()"></i>
+                                    </div>
+                                    <div class="aui-bar-btn-item">
+                                        <input style="text-align: center;" type="text" name="count[]" value="1" onclick="changeTotal()" readonly="readonly">
+                                    </div>
+                                    <div class="aui-bar-btn-item">
+                                        <i id="1_+" class="aui-iconfont aui-icon-plus" onclick="checkPositive()"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <a href="detail.html">
+                            <img src="image/product/01.jpeg">
+                        </a>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-16 aui-ellipsis-2">日本 Unicharm~ 超省水1/2化妝棉<span class="p_type aui-text-gray">(40枚入)</span></div>
+                            <a href="#" class="aui-pull-left">
+                                <p class="aui-iconfont aui-icon-trash"></p>
+                            </a>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-10">
+                            <div class="change-price">NT$<span class="aui-text-danger aui-bold aui-font-size-16">400</span>
+                                <input class="input-border" type="text" placeholder="變價金額">
+                                <span class="c_price aui-text-info">變價NT$500</span>
+                            </div>
+                            <div class="aui-list-item-right">
+                                <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:90%;float:right">
+                                    <div class="aui-bar-btn-item">
+                                        <i class="aui-iconfont aui-icon-minus"></i>
+                                    </div>
+                                    <div class="aui-bar-btn-item">
+                                        <input type="text" class="aui-input aui-text-center" value="1">
+                                    </div>
+                                    <div class="aui-bar-btn-item">
+                                        <i class="aui-iconfont aui-icon-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <a href="detail.html">
+                            <img src="image/product/02.jpeg">
+                        </a>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-16 aui-ellipsis-2">ARM&HAMMER 2倍濃縮洗衣精-敏感肌膚專用<span class="p_type aui-text-gray">(3000ml)</span></div>
+                            <a href="#" class="aui-pull-left">
+                                <p class="aui-iconfont aui-icon-trash"></p>
+                            </a>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-10">
+                            <div class="change-price">NT$<span class="aui-text-danger aui-bold aui-font-size-16">200</span>
+                                <input class="input-border" type="text" placeholder="變價金額">
+                                <span class="c_price aui-text-info"></span>
+                            </div>
+                            <div class="aui-list-item-right">
+                                <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:90%;float:right">
+                                    <div class="aui-bar-btn-item">
+                                        <i class="aui-iconfont aui-icon-minus"></i>
+                                    </div>
+                                    <div class="aui-bar-btn-item">
+                                        <input type="text" class="aui-input aui-text-center" value="1">
+                                    </div>
+                                    <div class="aui-bar-btn-item">
+                                        <i class="aui-iconfont aui-icon-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="aui-content-padded check-btn" style="margin-bottom: 6rem;">
+        <div class="aui-btn aui-btn-primary aui-btn-block aui-btn-sm btn-popup">確認變價</div>
+    </div>
+    <footer class="aui-bar aui-bar-tab footer-addcart">
+        <div class="aui-bar-tab-item" tapmode style="width: 6rem;">
+            <div class="aui-bar-tab-label aui-text-danger aui-font-size-18 aui-bold">總計NT$<span>15000</span></div>
+        </div>
+        <a href="cart_list.html" class="aui-bar-tab-item aui-bg-primary aui-text-white" tapmode style="width: auto;width: 5rem;">結帳</a>
+    </footer>
+    <!-- 底部導航 -->
+    <footer class="aui-bar aui-bar-tab">
+        <div class="aui-bar-tab-item footer_home aui-active" tapmode>
+            <a href="index.html">
+                <i class="aui-iconfont aui-icon-home"></i>
+                <div class="aui-bar-tab-label">前台首頁</div>
+            </a>
+        </div>
+        <div class="aui-bar-tab-item footer_shop" tapmode>
+            <a href="shop.html">
+                <i class="aui-iconfont aui-icon-star"></i>
+                <div class="aui-bar-tab-label">採購列表</div>
+            </a>
+        </div>
+        <div class="aui-bar-tab-item footer_cart" tapmode>
+            <a href="cart.html">
+                <div class="aui-badge">5</div>
+                <i class="aui-iconfont aui-icon-cart"></i>
+                <div class="aui-bar-tab-label">購物車</div>
+            </a>
+        </div>
+        <div class="aui-bar-tab-item footer_member" tapmode>
+            <a href="member.html">
+                <i class="aui-iconfont aui-icon-my"></i>
+                <div class="aui-bar-tab-label">會員專區</div>
+            </a>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="./script/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./script/jquery.countdown.js"></script>
+<!-- <script type="text/javascript" src="./script/script.js"></script> -->
+<script>
+$(document).ready(function() {
+    // $("#footer").load("footer.html");
+    $("#change-price").click(function() {
+        $(".change-price input").toggle();
+        $(".check-btn").toggle();
+        $(".c_price").toggle();
+        $("#change-price span").toggle();
+
+    });
+});
+
+//加減計算
+function checkPositive() {
+    let id = event.target.id;
+    console.log(id);
+    let split = id.split("_");
+    let idx = parseInt(split[0]) - 1;
+    console.log(idx);
+    var x = document.getElementsByName("count[]");
+    if (split[1] == "+") {
+        x[idx].value = parseInt(x[idx].value) + 1;
+    } else if (split[1] == "-") {
+        x[idx].value = parseInt(x[idx].value) - 1;
+    } else {}
+    self.changeTotal();
+}
+// 顯示剩餘數量
+function changeTotal(x) {
+    var x = document.getElementsByName("count[]");
+    for (let a = 0; a < x.length; a++) {
+        if (x[a].value < 0) { x[a].value = 0; }
+    }
+    var total_count = 0;
+    for (let a = 0; a < x.length; a++) {
+        let t = parseInt(x[a].value);
+        total_count += t;
+    }
+    console.log(`total = ${total_count}`);
+    document.getElementById("show_total").innerHTML = total_count;
+}
+</script>
+
+</html>
